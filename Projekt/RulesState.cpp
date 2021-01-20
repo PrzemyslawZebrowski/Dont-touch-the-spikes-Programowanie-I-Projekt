@@ -21,7 +21,7 @@ RulesState::RulesState(Gamedata* d)
 	auto lb = button.getLocalBounds();
 	button.setOrigin(lb.width / 2, lb.height / 2);
 
-	sf::Vector2f pos(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA - 80);
+	sf::Vector2f pos(WINDOW_WIDTH / 2, WINDOW_HEIGHT - 80);
 	button.setPosition(pos);
 	lb = buttonText.getLocalBounds();
 	buttonText.setOrigin(lb.width / 2, lb.height / 2 + 5);

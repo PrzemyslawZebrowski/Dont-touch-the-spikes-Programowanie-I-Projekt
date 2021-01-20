@@ -1,7 +1,7 @@
 #pragma once
 #include "State.h"
 #include "Game.h"
-#include "definicje.h"
+#include "definitions.h"
 #include "MenuState.h"
 
 class SplashState : public State

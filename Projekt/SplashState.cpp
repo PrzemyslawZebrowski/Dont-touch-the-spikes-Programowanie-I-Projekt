@@ -8,7 +8,7 @@ SplashState::SplashState(Gamedata* dane)
 	text.setFont(font);
 	transparency = 0;
 	text.setFillColor(sf::Color::White);
-	text.setString(std::string("Dzien dobry! :)"));
+	text.setString(std::string("Dzien dobry!"));
 	text.setOrigin(sf::Vector2f(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2));
 	text.setPosition(sf::Vector2f(dane->window.getSize().x / 2, dane->window.getSize().y / 2));
 	text.setCharacterSize(30);

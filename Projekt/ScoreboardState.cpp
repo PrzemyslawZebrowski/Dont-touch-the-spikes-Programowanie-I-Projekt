@@ -21,7 +21,7 @@ ScoreboardState::ScoreboardState(Gamedata* d)
 		std::string linetxt(_scoremachine->getScoreLine(i));
 		line.setString(linetxt);
 		line.setOrigin(line.getGlobalBounds().width / 2, 0);
-		line.setPosition(SZERKOKOSC_OKNA / 2, 80 + 50 * i);
+		line.setPosition(WINDOW_WIDTH / 2, 80 + 50 * i);
 		scoreboardLines.push_back(line);
 	}
 }
@@ -68,7 +68,7 @@ void ScoreboardState::loadImg()
 
 	auto lb = board.getLocalBounds();
 	board.setOrigin(lb.width / 2, lb.height / 2);
-	board.setPosition(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA / 2 - 50);
+	board.setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2 - 50);
 	board.setScale(sf::Vector2f(.8f, .9f));
 	board.rotate(90);
 }
@@ -81,7 +81,7 @@ void ScoreboardState::loadButton()
 	auto lb = button.getLocalBounds();
 	button.setOrigin(lb.width / 2, lb.height/2);
 
-	sf::Vector2f pos(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA - 80);
+	sf::Vector2f pos(WINDOW_WIDTH / 2, WINDOW_HEIGHT - 80);
 	button.setPosition(pos);
 	lb = buttonText.getLocalBounds();
 	buttonText.setOrigin(lb.width / 2, lb.height / 2 + 5);
@@ -102,7 +102,7 @@ void ScoreboardState::loadText()
 	titleBoard.setFillColor(sf::Color::White);
 
 	
-	titleBoard.setPosition(SZERKOKOSC_OKNA / 2, 80);
+	titleBoard.setPosition(WINDOW_WIDTH / 2, 80);
 	
 
 	titleBoard.setCharacterSize(40);
