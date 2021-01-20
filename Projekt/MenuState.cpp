@@ -62,7 +62,7 @@ void MenuState::loadButtons()
 		text[i].setFillColor(sf::Color::White);
 		text[i].setString(textInside[i]);
 		text[i].setOrigin(sf::Vector2f(text[i].getLocalBounds().width / 2, text[i].getLocalBounds().height / 2));
-		text[i].setPosition(sf::Vector2f((SZERKOKOSC_OKNA / 2), 200 + (WYSKOKOSC_OKNA / 7) * (i + 1)));
+		text[i].setPosition(sf::Vector2f((WINDOW_WIDTH / 2), 200 + (WINDOW_HEIGHT / 7) * (i + 1)));
 
 		buttons[i].setTexture(buttonimg);
 		buttons[i].setOrigin(sf::Vector2f(buttons[i].getLocalBounds().width / 2, buttons[i].getLocalBounds().height / 2));
@@ -83,7 +83,7 @@ void MenuState::loadTitle()
 		title[i].setTexture(titleTexture[i]);
 		auto _lb = title[i].getLocalBounds();
 		title[i].setOrigin(_lb.width / 2, _lb.height / 2);
-		title[i].setPosition(SZERKOKOSC_OKNA / 2-7, (i==0)? (_lb.height / 2 + 40) : (1.2 * _lb.height + 40));
+		title[i].setPosition(WINDOW_WIDTH / 2-7, (i==0)? (_lb.height / 2 + 40) : (1.2 * _lb.height + 40));
 	}
 }
 

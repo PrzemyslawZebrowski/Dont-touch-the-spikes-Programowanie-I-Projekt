@@ -158,7 +158,7 @@ void GameState::loadBird()
 
 	bird.setTexture(birdimg);
 	bird.setOrigin(bird.getLocalBounds().width / 2, bird.getLocalBounds().height / 2);
-	bird.setPosition(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA / 2);
+	bird.setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
 
 	birdSpeed = sf::Vector2f(4, 0);
 }
@@ -167,22 +167,22 @@ void GameState::loadMap()
 {
 	// Paski góra/dó³
 
-	upperBar = sf::RectangleShape(sf::Vector2f(SZERKOKOSC_OKNA, 75));
-	bottomBar = sf::RectangleShape(sf::Vector2f(SZERKOKOSC_OKNA, 75));
+	upperBar = sf::RectangleShape(sf::Vector2f(WINDOW_WIDTH, 75));
+	bottomBar = sf::RectangleShape(sf::Vector2f(WINDOW_WIDTH, 75));
 
 	upperBar.setFillColor(activeColor);
 	bottomBar.setFillColor(activeColor);
 
-	bottomBar.move(0, WYSKOKOSC_OKNA - 75);
+	bottomBar.move(0, WINDOW_HEIGHT - 75);
 
 	// Paski lewo/prawo
-	leftBar = sf::RectangleShape(sf::Vector2f(25, WYSKOKOSC_OKNA));
-	rightBar = sf::RectangleShape(sf::Vector2f(25, WYSKOKOSC_OKNA));
+	leftBar = sf::RectangleShape(sf::Vector2f(25, WINDOW_HEIGHT));
+	rightBar = sf::RectangleShape(sf::Vector2f(25, WINDOW_HEIGHT));
 
 	leftBar.setFillColor(activeColor);
 	rightBar.setFillColor(activeColor);
 
-	rightBar.move(SZERKOKOSC_OKNA - 25, 0);
+	rightBar.move(WINDOW_WIDTH - 25, 0);
 }
 
 void GameState::ChangeColor()		// zmieniamy kolor mapy
@@ -234,9 +234,9 @@ void GameState::loadSpikes()
 		bottomSpikes.push_back(sf::ConvexShape());
 		bottomSpikes.at(i).setPointCount(3);
 		p1 = i * 50 + 25 + 19 + i * 7;
-		bottomSpikes.at(i).setPoint(0, sf::Vector2f(p1, WYSKOKOSC_OKNA - 75.f));
-		bottomSpikes.at(i).setPoint(1, sf::Vector2f(p1 + 50.f, WYSKOKOSC_OKNA - 75.f));
-		bottomSpikes.at(i).setPoint(2, sf::Vector2f(p1 + 25.f, WYSKOKOSC_OKNA - 100.f));
+		bottomSpikes.at(i).setPoint(0, sf::Vector2f(p1, WINDOW_HEIGHT - 75.f));
+		bottomSpikes.at(i).setPoint(1, sf::Vector2f(p1 + 50.f, WINDOW_HEIGHT - 75.f));
+		bottomSpikes.at(i).setPoint(2, sf::Vector2f(p1 + 25.f, WINDOW_HEIGHT - 100.f));
 		bottomSpikes.at(i).setFillColor(activeColor);
 	}
 }
@@ -269,9 +269,9 @@ void GameState::randRightSpikes()
 		rightSpikes.push_back(sf::ConvexShape());
 		rightSpikes.at(i).setPointCount(3);
 		p = j * 50 + 75 + 17 + j * 7;
-		rightSpikes.at(i).setPoint(0, sf::Vector2f(SZERKOKOSC_OKNA, p));
-		rightSpikes.at(i).setPoint(1, sf::Vector2f(SZERKOKOSC_OKNA, p + 50.f));
-		rightSpikes.at(i).setPoint(2, sf::Vector2f(SZERKOKOSC_OKNA - 25.f, p + 25.f));
+		rightSpikes.at(i).setPoint(0, sf::Vector2f(WINDOW_WIDTH, p));
+		rightSpikes.at(i).setPoint(1, sf::Vector2f(WINDOW_WIDTH, p + 50.f));
+		rightSpikes.at(i).setPoint(2, sf::Vector2f(WINDOW_WIDTH - 25.f, p + 25.f));
 
 		rightSpikes.at(i).setFillColor(activeColor);
 	}
@@ -346,7 +346,7 @@ void GameState::loadPointsDisplay()
 
 	pointsDisplayBackground = sf::CircleShape(75);
 	pointsDisplayBackground.setOrigin(75, 65);
-	pointsDisplayBackground.setPosition(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA / 2);
+	pointsDisplayBackground.setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2);
 	pointsDisplayBackground.setFillColor(activeColor);
 }
 

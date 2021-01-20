@@ -67,7 +67,7 @@ void GameOverState::loadImg()
 
 	auto lb = gameOver.getLocalBounds();
 	gameOver.setOrigin(lb.width / 2, lb.height / 2);
-	gameOver.setPosition(SZERKOKOSC_OKNA / 2, 120);
+	gameOver.setPosition(WINDOW_WIDTH / 2, 120);
 	gameOver.setScale(sf::Vector2f(1.1f, 1.1f));
 
 	boardimg.loadFromFile("src/board.png");
@@ -75,7 +75,7 @@ void GameOverState::loadImg()
 
 	lb = board.getLocalBounds();
 	board.setOrigin(lb.width / 2, lb.height / 2);
-	board.setPosition(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA / 2 - 50);
+	board.setPosition(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2 - 50);
 	board.setScale(sf::Vector2f(.5f, .5f));
 
 
@@ -90,7 +90,7 @@ void GameOverState::loadButton()
 		button[i].setTexture(buttonimg);
 		auto lb = button[i].getLocalBounds();
 		button[i].setOrigin(lb.width / 2, lb.height / 2);
-		sf::Vector2f pos(SZERKOKOSC_OKNA / 2, WYSKOKOSC_OKNA - 200 + 100 *i);
+		sf::Vector2f pos(WINDOW_WIDTH / 2, WINDOW_HEIGHT - 200 + 100 *i);
 		button[i].setPosition(pos);
 		lb = buttonText[i].getLocalBounds();
 		buttonText[i].setOrigin(lb.width / 2, lb.height / 2 + 5);

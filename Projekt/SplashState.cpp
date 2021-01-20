@@ -8,7 +8,7 @@ SplashState::SplashState(Gamedata* dane)
 	text.setFont(font);
 	transparency = 0;
 	text.setFillColor(sf::Color::White);
-	text.setString(std::string("Dzien dobry! :)"));
+	text.setString(std::string("Dzien dobry!"));
 	text.setOrigin(sf::Vector2f(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2));
 	text.setPosition(sf::Vector2f(dane->window.getSize().x / 2, dane->window.getSize().y / 2));
 	text.setCharacterSize(30);
@@ -18,7 +18,7 @@ SplashState::SplashState(Gamedata* dane)
 void SplashState::Update()
 {
 	
-	if (transparency+2 < 256)transparency += 1;
+	if (transparency+1 < 256)transparency += 1;
 	text.setFillColor(sf::Color(255, 255, 255, transparency));
 	if (clock.getElapsedTime().asSeconds() > SPLASH_TIME)
 	{

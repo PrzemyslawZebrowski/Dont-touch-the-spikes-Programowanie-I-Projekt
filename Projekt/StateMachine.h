@@ -1,5 +1,5 @@
 #pragma once
-#include "definicje.h"
+#include "definitions.h"
 #include "State.h"
 #include <stack>
 
