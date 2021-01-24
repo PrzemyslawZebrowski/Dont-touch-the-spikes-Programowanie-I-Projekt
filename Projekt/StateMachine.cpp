@@ -3,10 +3,10 @@
 
 StateMachine::StateMachine()
 {
-	isAdding = false;
-	isRemoving = false;
-	isReplacing = false;
-	_state = nullptr;
+	isAdding = false;		// czy jest cos do dodania do stosu
+	isRemoving = false;		// czy usunac grorny element stosu
+	isReplacing = false;	// czy zamienic gorny element stosu
+	_state = nullptr;		// wskaznik na state do dodania do stosu
 }
 
 State* StateMachine::getActiveState()

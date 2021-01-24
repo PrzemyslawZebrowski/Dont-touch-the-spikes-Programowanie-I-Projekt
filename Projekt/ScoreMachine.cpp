@@ -2,8 +2,9 @@
 
 void ScoreMachine::sortList()
 {
+    // sortujemy vector wzgledem ilosci punktow
     std::sort(scoreboardList.begin(), scoreboardList.end(), sortListFunction);
-    if(scoreboardList.size()>10)
+    if(scoreboardList.size()>10)        // zostawiamy 10 najlepszych
         scoreboardList.pop_back();
 }
 
@@ -20,11 +21,13 @@ void ScoreMachine::saveList()
 
 ScoreDataLine ScoreMachine::getTopScore()
 {
+    //pobieramy najlepszy wynik
     return scoreboardList.front();
 }
 
 void ScoreMachine::loadList()
 {
+    //ladujemy liste do vectora
     std::fstream scoreboard("scoreboard.bin", std::ios::binary | std::ios::in | std::ios::ate);
     int size = scoreboard.tellg();
     scoreboard.seekg(0);
@@ -36,12 +39,13 @@ void ScoreMachine::loadList()
     }
 
     scoreboard.close();
-    while (scoreboardList.size() < 10)
+    while (scoreboardList.size() < 10)              // w przypadku niewystarczajacej ilosci wynikow zapelniamy wektor pustymi danymi
         scoreboardList.push_back(ScoreDataLine{ 0,"---------------" });
 }
 
 void ScoreMachine::addScore(int sc)
 {
+    // dodajemy wynik do wektora
     ScoreDataLine temp;
     temp.points = sc;
 
@@ -61,6 +65,7 @@ void ScoreMachine::addScore(int sc)
 
 std::string ScoreMachine::getScoreLine(unsigned n)
 {
+    // pobieramy zamieniony na string element wektora o indeksie n
     std::string toReturn = "";
 
     if ((n-1 < scoreboardList.size())&&(n>0))

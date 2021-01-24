@@ -4,6 +4,9 @@ GameOverState::GameOverState(Gamedata* d, int s)
 {
 	data = d;
 	score = s;
+
+	// zapisujemy wynik i pobieramy najlepszy
+
 	ScoreMachine* scoreMachine = new ScoreMachine();;
 	scoreMachine->loadList();
 	scoreMachine->addScore(score);
@@ -12,7 +15,7 @@ GameOverState::GameOverState(Gamedata* d, int s)
 	bestScore = scoreMachine->getTopScore().points;
 	delete scoreMachine;
 	
-
+	// ustawiamy wszystko na swoje miejsce
 	
 	loadImg();
 	loadText();

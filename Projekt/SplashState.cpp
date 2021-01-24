@@ -17,10 +17,10 @@ SplashState::SplashState(Gamedata* dane)
 
 void SplashState::Update()
 {
-	
+	// z ka¿da klatka widocznosc napisu zwieksza sie
 	if (transparency+1 < 256)transparency += 1;
 	text.setFillColor(sf::Color(255, 255, 255, transparency));
-	if (clock.getElapsedTime().asSeconds() > SPLASH_TIME)
+	if (clock.getElapsedTime().asSeconds() > SPLASH_TIME)	// po 5 s przechodzimy dalej
 	{
 		data->machine.addState(new MenuState(data));
 	}

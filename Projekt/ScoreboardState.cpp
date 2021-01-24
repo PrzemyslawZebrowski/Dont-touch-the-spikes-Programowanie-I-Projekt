@@ -24,6 +24,7 @@ ScoreboardState::ScoreboardState(Gamedata* d)
 		line.setPosition(WINDOW_WIDTH / 2, 80 + 50 * i);
 		scoreboardLines.push_back(line);
 	}
+	delete _scoremachine;
 }
 
 void ScoreboardState::Update()

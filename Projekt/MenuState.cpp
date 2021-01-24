@@ -5,6 +5,9 @@ MenuState::MenuState(Gamedata* dane)
 {
 	this->data = dane;
 
+
+	// ustawiamy wszystko do wyswietlenia
+
 	loadBackground();
 	loadButtons();
 	loadTitle();
@@ -19,11 +22,11 @@ void MenuState::Update()
 void MenuState::Render()
 {
 	data->window.draw(background);
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)		//guziki
 		data->window.draw(buttons[i]);
-	for (int i=0; i < size; i++)
+	for (int i=0; i < size; i++)		//tekst na nich
 		data->window.draw(text[i]);
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < 2; i++)			// logo gry
 		data->window.draw(title[i]);
 	
 }

@@ -12,6 +12,8 @@ Game::Game(int h, int w, std::string n)
 
 void Game::run()
 {
+    // Pêtla gry
+
     while (data->window.isOpen())
     {
         data->machine.changingProcess();
