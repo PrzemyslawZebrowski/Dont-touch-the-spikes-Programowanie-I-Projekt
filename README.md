@@ -16,7 +16,7 @@ Projekt jest próbą odwzorowania popularnej gry mobilnej „don't touch the spi
 -	przechowywanie wyników z 10 naszych najlepszych podejść
 
 # Przebieg realizacji
-Pliki niezbędne do poprawnego działania programu:
+## Pliki niezbędne do poprawnego działania programu:
 -	main.cpp – rozpoczyna grę wykorzystując konstruktor klasy Game, 
 -	definitions.h – zawiera różne stałe wykorzystywane podczas pracy programu (np. szerokość wyświetlanego ekranu),
 -	Game.h/Game.cpp – przechowuję niezbędne dane do prawidłowego wyświetlania gry oraz poprawnego zarządzania stanami gry,
