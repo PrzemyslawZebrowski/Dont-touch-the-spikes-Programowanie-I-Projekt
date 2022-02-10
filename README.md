@@ -35,6 +35,7 @@ Projekt jest próbą odwzorowania popularnej gry mobilnej „don't touch the spi
 
 Do korzystania z programu wymagana jest także zewnętrzna biblioteka SFML (Simple and Fast Multimedia Library). Jest to wieloplatformowa biblioteka ułatwiająca tworzenie gier oraz programów multimedialnych. Jest napisana w C++ i może być wykorzystywana w takich językach jak: C, platformie .NET, D, Pythonie, Javie.
 SFML obsługuje akcelerację sprzętową grafiki 2D przy użyciu OpenGL. Biblioteka jest otwartym oprogramowaniem wydanym na licencji zlib.
+
 W skład SFML wchodzi pięć modułów:
 -	System – obsługuje czas i wątki,
 -	Window – obsługuje okna i interakcję z użytkownikiem,
